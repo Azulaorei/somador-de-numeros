@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo/style.css">
+    <link rel="stylesheet" href="Estilo/mediaquerie.css">
+    <link rel="shortcut icon" href="Favicon/icons8-plus-32.png" type="image/x-icon">
+    <title>Somando Números</title>
+</head>
+<body>
+    <header>
+        <h1>Somador de Números</h1>
+    </header>
+    <form action="resultado.php" method="post">
+        <input type="number" name="n1" id="in1">
+        <p>+</p>
+        <input type="number" name="n2" id="in2">
+        <p>=</p>
+        <div id="resultado"></div>
+    </form>
+    <div id="botao">
+        <input type="button" value="Somar" onclick="soma()">
+    </div>
+
+    <script>
+        function soma() {
+            var c1 = window.document.getElementById("in1")
+            var c2 = window.document.getElementById("in2")
+            var resultado = window.document.querySelector("div#resultado")
+            var v1 = Number(c1.value)
+            var v2 = Number(c2.value)
+            var soma = v1 + v2
+
+            resultado.innerHTML = soma
+        }
+    </script>
+</body>
+</html>
